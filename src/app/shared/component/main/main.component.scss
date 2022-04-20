@@ -1,0 +1,156 @@
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@200;300;500&display=swap');
+* {
+    font-family: 'Cairo', sans-serif;
+}
+
+a {
+    text-decoration: none;
+}
+
+body {
+    background: #F1F1F1;
+}
+
+.sp-container {
+    padding: 0% 3%;
+}
+
+.section-title {
+    position: relative;
+}
+
+.section-title h3 {
+    font-family: 'Cairo';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 28px;
+    line-height: 52px;
+    color: #000000;
+}
+
+.section-title h3::before {
+    content: "";
+    position: absolute;
+    width: 144px;
+    height: 3px;
+    left: 560px;
+    background: linear-gradient(90deg, #FA0200 0%, rgba(250, 2, 0, 0) 98.61%);
+}
+
+.section-title h3::after {
+    content: "";
+    position: absolute;
+    width: 144px;
+    height: 3px;
+    left: 629px;
+    top: 50px;
+    background: linear-gradient(90deg, #FA0200 0%, rgba(250, 2, 0, 0) 98.61%);
+    ;
+}
+
+.mt-50 {
+    margin-top: 50px;
+}
+
+.mb-100 {
+    margin-bottom: 100px;
+}
+
+.mt-100 {
+    margin-top: 100px;
+}
+
+
+/*----Heaader-----*/
+
+#header {
+    background: white;
+    border-radius: 0px 0px 15px 15px;
+    height: 100px;
+}
+
+
+/*-----Navber-----*/
+
+.nav-border {
+    height: 5px;
+    border-top: 2px solid #A2A2A2;
+}
+
+.nav-item {
+    position: relative;
+    color: #FA0200;
+}
+
+.nav-item>a {
+    color: black;
+}
+
+.nav-item.active::before {
+    content: "";
+    position: absolute;
+    width: 36px;
+    height: 1px;
+    bottom: 29px;
+    left: 6px;
+    background: linear-gradient(90deg, #FA0200 0%, rgba(250, 2, 0, 0) 98.61%);
+    ;
+}
+
+.nav-item.active::after {
+    content: "";
+    position: absolute;
+    width: 36px;
+    height: 1px;
+    right: 0px;
+    top: 30px;
+    background: linear-gradient(90deg, #FA0200 0%, rgba(250, 2, 0, 0) 98.61%);
+    ;
+}
+
+.store-rate {
+    padding: .375rem .75rem
+}
+
+
+/*----------------------footer-------------------------*/
+
+.footer {
+    height: 590px;
+    background: #000000;
+}
+
+.footer .footer-content {
+    padding: 0% 5%;
+    display: flex;
+    /* align-items: center; */
+    justify-content: center;
+    flex-direction: column;
+    height: 100%;
+}
+
+.footer .location h4 {
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 28px;
+    letter-spacing: -0.231818px;
+    color: #F1F1F1;
+}
+
+.footer .phone h4 {
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 28px;
+    letter-spacing: -0.231818px;
+    color: #F1F1F1;
+}
+
+.footer .input-email h4 {
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 24px;
+    /* or 200% */
+    display: flex;
+    align-items: center;
+    color: #F1F1F1;
+}
