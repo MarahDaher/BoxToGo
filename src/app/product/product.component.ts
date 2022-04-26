@@ -24,10 +24,9 @@ export class ProductComponent extends BaseComponent implements OnInit {
       quantity:'2'
     }
   ];
-
   minProduct = [ 
     {
-    img : 'assets/product/11.png'
+    img : 'assets/product/22.png'
   },
   {
     img : 'assets/product/11.png'
@@ -41,7 +40,15 @@ export class ProductComponent extends BaseComponent implements OnInit {
   {
     img : 'assets/product/11.png'
   }
-];
+  ];
+
+  reviewList = [
+    {id : 5 , rate : 80},
+    {id : 4 , rate : 7},
+    {id : 3 , rate : 5},
+    {id : 2 , rate : 1},
+    {id : 1 , rate : 7},
+  ];
 
   selectedProduct :any ;
 

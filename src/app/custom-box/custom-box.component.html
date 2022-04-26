@@ -1,0 +1,100 @@
+<div class="custom-box mt-50">
+    <div class="row">
+        <div class="col-md-8">
+            <div class="custom-box-card">
+                <div class="p-4">
+                    <h3>Order Review</h3>
+                    <div class="row">
+                        <div class="col-md-12 d-flex">
+                            <img src="assets/custom-box/1.png">
+                            <span class="d-flex box-details flex-column mx-3">
+                                <h3>Your custom box</h3>
+                                <h6>2,40 $</h6>
+                                <span class="d-flex align-items-center product-quantity">
+                                    <button nz-button nzType="default">
+                                        <img src="assets/product/min.png">
+                                    </button>
+                                    <h3 class="mx-3 mt-1 mb-0">2</h3>
+                                    <button nz-button nzType="default">
+                                        <img src="assets/product/max.png">
+                                    </button>
+                                </span>
+                            </span>
+                            <span class="d-flex align-items-end flex-column justify-content-between w-100">
+                                    <button nz-button nzType="default">
+                                        <img src="assets/custom-box/delete.png">
+                                    </button>
+                                    <span class="d-flex align-items-center product-quantity">
+                                        <p class="mb-0">Item types and quantities</p>
+                                        <button nz-button nzType="default">
+                                            <img src="assets/custom-box/Vector.png">
+                                        </button>
+                                    </span>
+                            </span>
+                        </div>
+                    </div>
+
+                    <div class="row p-2 mt-3">
+                        <div class="custom-box-card-details">
+                            <div class="p-2">
+                                <div class="row" *ngFor="let order of orderRewiemList">
+                                    <div class="col-md-6 order p-1 my-1">
+                                        <img [src]="order?.img" class="mx-1">
+                                        <h3 class="mx-2">{{order?.title}}</h3>
+                                    </div>
+                                    <div class="col-md-6 order p-1 my-1 justify-content-end">
+
+                                        <span class="d-flex align-items-center product-quantity">
+                                            <h3 class="mx-3 text-danger mb-0">$ {{order?.price}}</h3>
+                                            <button nz-button nzType="default">
+                                                <img src="assets/custom-box/icons (2).png">
+                                            </button>
+                                            <h3 class="mx-4 mb-0">2</h3>
+                                            <button nz-button nzType="default">
+                                                <img src="assets/custom-box/icons (3).png">
+                                            </button>
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <hr>
+
+                    <div class="row">
+                        <div class="col-md-12 d-flex">
+                            <img src="assets/custom-box/1.png">
+                            <span class="d-flex box-details flex-column mx-3">
+                                <h3>Economical large food box </h3>
+                                <h6>2,40 $</h6>
+                                <span class="d-flex align-items-center product-quantity">
+                                    <button nz-button nzType="default">
+                                        <img src="assets/product/min.png">
+                                    </button>
+                                    <h3 class="mx-3 mt-1 mb-0">2</h3>
+                                    <button nz-button nzType="default">
+                                        <img src="assets/product/max.png">
+                                    </button>
+                                </span>
+                            </span>
+                            <span class="d-flex align-items-end flex-column justify-content-between w-100">
+                                    <button nz-button nzType="default">
+                                        <img src="assets/custom-box/delete.png">
+                                    </button>
+                                    <span class="d-flex align-items-center product-quantity">
+                                        <p class="mb-0">Item types and quantities</p>
+                                        <button nz-button nzType="default">
+                                            <img src="assets/custom-box/Vector.png">
+                                        </button>
+                                    </span>
+                            </span>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4 custom-box-card"></div>
+
+</div>

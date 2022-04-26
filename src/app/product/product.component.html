@@ -10,7 +10,7 @@
                     <nz-rate [ngModel]="3" nzDisabled></nz-rate>
                     <p class="mx-3 mt-1 mb-0">4.8</p>
                 </span>
-                <span class="d-flex align-items-center product-price">
+                <span class="d-flex align-items-center product-price mt-2">
                     <h1 class="text-danger">2,40 $</h1>
                     <small class="mx-4 mb-1"><del>4 $</del></small>
                 </span>
@@ -20,16 +20,86 @@
                 <h3>{{selectedProduct?.tag}}</h3>
                 <h3>{{selectedProduct?.sku}}</h3>
 
+                <h4 class="mt-2">Quantité:</h4>
+                <span class="d-flex align-items-center product-quantity">
+                    <button nz-button nzType="default">
+                        <img src="assets/product/min.png">
+                    </button>
+                    <h3 class="mx-3">{{selectedProduct?.quantity}}</h3>
+                    <button nz-button nzType="default">
+                        <img src="assets/product/max.png">
+                    </button>
+                    <span class="product-Shipping mx-2">
+                        <h3>Shipping: <span class="text-danger">4.80 $</span></h3>
+                </span>
+                </span>
+
+            </div>
+        </div>
+        <div class="row pb-4">
+            <div class="col-md-6 row d-flex justify-content-center">
+                <a class="product-item col-2" *ngFor="let img of minProduct">
+                    <img [src]="img?.img">
+                </a>
+            </div>
+            <div class="col-md-6 d-flex justify-content-end ">
+                <button nz-button nzType="default">
+                    <img src="assets/product/share.png">
+                </button>
+
+                <button nz-button nzType="default">
+                    <img src="assets/product/btn.png">
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="product mt-25">
+    <div class="products-content p-4 pt-2">
+        <div class="row">
+            <div class="col">
+                <nz-tabset>
+                    <nz-tab nzTitle="Descriptions">
+                        <p class="tab-content">
+                            Waterproof Camera Bag Photo Cameras Backpack For Canon Nikon Sony Xiaomi Laptop DSLR Portable Travel Tripod Lens Pouch Video Bag <br> <br> The camera knapsack is multi-functional to storage your cameras, accessories, computer,
+                            water bottle and other small things. Waterproof material and large capacity, the knapsack is suitable for outdoors or travel. Also it can be fixed on the suitcase rod for its back belt. <br>Features: One side pocket can put
+                            water bottle or camera rod, the other side can storage a camera. The back pocket can storage your flat computer. High-quality material, waterproof and durable. Inside compartment can storage cameras and accessories. Above pocket
+                            can put some small things for convenient take.<br> Specifications:
+
+                        </p>
+                    </nz-tab>
+                    <nz-tab nzTitle="Specifications">Content of Tab Pane 2</nz-tab>
+                </nz-tabset>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="product mt-25">
+    <div class="p-4">
+        <div class="row">
+            <div class="col header-reviews">
+                <h3 class="mx-3">Customer Reviews</h3>
             </div>
         </div>
         <div class="row">
             <div class="col-md-6 row">
-                <div class="col-1" *ngFor="let img of minProduct">
-                    <a class="product-item">
-                        <img [src]="img?.img">
-                    </a>
+                <div class="row" *ngFor="let review of reviewList">
+                    <span class="review col">
+                    <h6>{{review?.id}}</h6>
+                    <nz-progress [nzPercent]="review?.rate" class="w-100 mx-2"></nz-progress>
+                </span>
                 </div>
             </div>
+            <div class="col-md-6">
+                <div class="d-flex justify-content-center align-items-center rate">
+                    <h3 class="mx-3 my-1">4.0</h3>
+                    <nz-rate [ngModel]="2" nzDisabled></nz-rate>
+                </div>
+            </div>
+
         </div>
     </div>
+
 </div>
