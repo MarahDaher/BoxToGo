@@ -31,6 +31,12 @@ a {
     letter-spacing: 1px;
 }
 
+:host ::ng-deep .ant-btn:focus {
+    color: white !important;
+    border-color: white;
+    background: #fff;
+}
+
 //*------------custom-box-------------------*/
 .custom-box-card {
     background: #FFFFFF;
@@ -99,6 +105,161 @@ a {
     font-weight: 700;
     font-size: 14px;
     line-height: 26px;
+    letter-spacing: -0.02em;
+    color: #000000;
+}
+
+
+/*-----------Steps--------*/
+
+.step-title {
+    position: relative;
+}
+
+.box {
+    width: 42px;
+    height: 42px;
+    /* text-align: center; */
+    position: relative;
+    border-radius: 5.91194px;
+    transform: rotate(-45deg);
+    top: 11px;
+    left: 9px;
+    border: 1px solid #666666;
+    background: #FFFFFF;
+}
+
+.active {
+    background: #34A853;
+}
+
+.step-title h3 {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 20px;
+    text-align: center;
+    color: #666666;
+}
+
+.step-title img {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+}
+
+:host ::ng-deep .ant-steps-item-icon {
+    display: none;
+}
+
+
+/*------------shopping-info--------------*/
+
+.shopping-info {}
+
+.shopping-info h3 {
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 34px;
+    /* identical to box height */
+    letter-spacing: -0.02em;
+    color: #000000;
+}
+
+.shopping-info h4 {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 26px;
+    letter-spacing: -0.02em;
+    color: #2E9CC3;
+    display: flex;
+    align-items: center;
+}
+
+.radio-title {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 20px;
+    /* identical to box height, or 111% */
+    color: #AEAEAE;
+}
+
+[nz-radio] {
+    display: flex;
+    height: 32px;
+    line-height: 32px;
+    border: 1px solid #AEAEAE;
+    box-sizing: border-box;
+    border-radius: 5px;
+    height: 55px;
+}
+
+.default-btn {
+    display: flex;
+    height: 42px;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    /* box-shadow: 0px 4px 24px rgba(0, 0, 0, 0.1); */
+    border-radius: 10px;
+    box-sizing: border-box;
+    background: #FA0200;
+}
+
+.default-btn span {
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 26px;
+    text-align: center;
+    color: #FFFFFF;
+}
+
+.default-btn-shopping {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    /* box-shadow: 0px 4px 24px rgba(0, 0, 0, 0.1); */
+    border: 1px solid #000000;
+    box-sizing: border-box;
+    border-radius: 10px;
+    height: 42px;
+}
+
+.default-btn-shopping span {
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 26px;
+    text-align: center;
+    color: black
+}
+
+.note {
+    font-weight: 400;
+    font-size: 11px;
+    line-height: 22px;
+    letter-spacing: -0.02em;
+    color: #000000;
+    text-align: center;
+}
+
+
+/*----------sub-total---------------*/
+
+.sub-total h3 {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 26px;
+    text-align: right;
+    letter-spacing: -0.02em;
+    color: #000000;
+    opacity: 0.5;
+}
+
+.total h3 {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 26px;
+    text-align: right;
     letter-spacing: -0.02em;
     color: #000000;
 }

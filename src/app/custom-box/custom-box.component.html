@@ -4,10 +4,10 @@
             <div class="custom-box-card">
                 <div class="p-4">
                     <h3>Order Review</h3>
-                    <div class="row">
+                    <div class="row pt-2">
                         <div class="col-md-12 d-flex">
                             <img src="assets/custom-box/1.png">
-                            <span class="d-flex box-details flex-column mx-3">
+                            <span class="d-flex box-details flex-column mx-3 w-100">
                                 <h3>Your custom box</h3>
                                 <h6>2,40 $</h6>
                                 <span class="d-flex align-items-center product-quantity">
@@ -20,54 +20,56 @@
                                     </button>
                                 </span>
                             </span>
-                            <span class="d-flex align-items-end flex-column justify-content-between w-100">
+                            <span class="d-flex align-items-end flex-column justify-content-between w-50">
                                     <button nz-button nzType="default">
                                         <img src="assets/custom-box/delete.png">
                                     </button>
                                     <span class="d-flex align-items-center product-quantity">
                                         <p class="mb-0">Item types and quantities</p>
-                                        <button nz-button nzType="default">
-                                            <img src="assets/custom-box/Vector.png">
+                                        <button nz-button nzType="default" (click)="ShowOrderContent()">
+                                            <img src="assets/custom-box/arrow-left.png" *ngIf="!showContent">
+                                            <img src="assets/custom-box/Vector.png" *ngIf="showContent">
                                         </button>
                                     </span>
                             </span>
                         </div>
-                    </div>
 
-                    <div class="row p-2 mt-3">
-                        <div class="custom-box-card-details">
-                            <div class="p-2">
-                                <div class="row" *ngFor="let order of orderRewiemList">
-                                    <div class="col-md-6 order p-1 my-1">
-                                        <img [src]="order?.img" class="mx-1">
-                                        <h3 class="mx-2">{{order?.title}}</h3>
-                                    </div>
-                                    <div class="col-md-6 order p-1 my-1 justify-content-end">
+                        <div class="col-md-12 p-2 mt-2" *ngIf="showContent">
+                            <div class="custom-box-card-details px-3">
+                                <div class="p-2">
+                                    <div class="row" *ngFor="let order of orderRewiemList">
+                                        <div class="col-md-6 order p-1 my-1">
+                                            <img [src]="order?.img" class="mx-1">
+                                            <h3 class="mx-2">{{order?.title}}</h3>
+                                        </div>
+                                        <div class="col-md-6 order p-1 my-1 justify-content-end">
 
-                                        <span class="d-flex align-items-center product-quantity">
-                                            <h3 class="mx-3 text-danger mb-0">$ {{order?.price}}</h3>
-                                            <button nz-button nzType="default">
-                                                <img src="assets/custom-box/icons (2).png">
-                                            </button>
-                                            <h3 class="mx-4 mb-0">2</h3>
-                                            <button nz-button nzType="default">
-                                                <img src="assets/custom-box/icons (3).png">
-                                            </button>
-                                        </span>
+                                            <span class="d-flex align-items-center product-quantity">
+                                                <h3 class="mx-3 text-danger mb-0">$ {{order?.price}}</h3>
+                                                <button nz-button nzType="default">
+                                                    <img src="assets/custom-box/icons (2).png">
+                                                </button>
+                                                <h3 class="mx-4 mb-0">2</h3>
+                                                <button nz-button nzType="default">
+                                                    <img src="assets/custom-box/icons (3).png">
+                                                </button>
+                                            </span>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
+
                     <hr>
 
                     <div class="row">
                         <div class="col-md-12 d-flex">
                             <img src="assets/custom-box/1.png">
-                            <span class="d-flex box-details flex-column mx-3">
+                            <span class="d-flex box-details flex-column mx-3 w-100">
                                 <h3>Economical large food box </h3>
                                 <h6>2,40 $</h6>
-                                <span class="d-flex align-items-center product-quantity">
+                                <span class="d-flex align-items-center product-quantity ">
                                     <button nz-button nzType="default">
                                         <img src="assets/product/min.png">
                                     </button>
@@ -77,7 +79,7 @@
                                     </button>
                                 </span>
                             </span>
-                            <span class="d-flex align-items-end flex-column justify-content-between w-100">
+                            <span class="d-flex align-items-end flex-column justify-content-between w-50">
                                     <button nz-button nzType="default">
                                         <img src="assets/custom-box/delete.png">
                                     </button>
@@ -90,11 +92,104 @@
                             </span>
                         </div>
                     </div>
+                    <hr>
+
+
+                    <div class="row d-flex justify-content-between">
+                        <div class="col-md-6">
+                            <span class="d-flex justify-content-between sub-total">
+                                <h3>Subtotal</h3>
+                                <h3>400.00 $ </h3>
+                            </span>
+
+                            <span class="d-flex justify-content-between sub-total">
+                                <h3>Point</h3>
+                                <h3>- 25.00 $ </h3>
+                            </span>
+
+                            <span class="d-flex justify-content-between sub-total">
+                                <h3>Coupon</h3>
+                                <h3>- 25.00 $</h3>
+                            </span>
+
+                            <span class="d-flex justify-content-between total">
+                                <h3>Total</h3>
+                                <h3>350.00 $</h3>
+                            </span>
+                        </div>
+                    </div>
 
                 </div>
             </div>
         </div>
-    </div>
-    <div class="col-md-4 custom-box-card"></div>
+        <div class="col-md-4">
+            <div class="custom-box-card pb-3 p-2">
 
+                <div class="row p-4 pb-0">
+                    <nz-steps [nzCurrent]="currentStep">
+                        <nz-step [nzTitle]="deliveryTemplate"></nz-step>
+                        <nz-step [nzTitle]="confirmationTemplate"></nz-step>
+                        <nz-step [nzTitle]="paymentTemplate" nzStatus="process" nzIcon="loading"></nz-step>
+
+                        <ng-template #deliveryTemplate>
+                            <div class="step-title">
+                                <div class="box active"></div>
+                                <img src="assets/custom-box/delivery.png">
+                                <h3 class="mt-4">Delivery</h3>
+                            </div>
+                        </ng-template>
+
+                        <ng-template #confirmationTemplate>
+                            <div class="step-title">
+                                <div class="box"></div>
+                                <img src="assets/custom-box/Confirmation.png">
+                                <h3 class="mt-4">Confirmation</h3>
+                            </div>
+                        </ng-template>
+
+                        <ng-template #paymentTemplate>
+                            <div class="step-title">
+                                <div class="box"></div>
+                                <img src="assets/custom-box/Payment.png">
+                                <h3 class="mt-4">Payment</h3>
+                            </div>
+                        </ng-template>
+                    </nz-steps>
+                </div>
+
+                <hr class="mx-3">
+
+                <div class="row shopping-info m-0 p-0">
+                    <h3>Shopping Information</h3>
+                    <h4> <i nz-icon nzType="plus" nzTheme="outline"></i>
+                        <span class="mx-1">Add New Address</span>
+                    </h4>
+                    <div class="addresses">
+                        <div class="new-address">
+                            <label nz-radio ngModel class="my-2 p-2"><h3 class="radio-title">Address Name 1</h3></label>
+                            <label nz-radio ngModel class="my-2 p-2"><h3 class="radio-title">Address Name 2</h3></label>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row w-100 m-0 p-0">
+                    <div class="col">
+                        <a class="default-btn p-2">
+                            <span class="mx-3">Continue</span>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="row w-100 m-0 p-0 my-2">
+                    <div class="col">
+                        <a class="default-btn-shopping p-1">
+                            <span class="mx-3">Continue Shopping</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <h3 class="note my-2">Upon clicking 'Place Order', I confirm I have read and acknowledged all terms and policies.</h3>
+        </div>
+    </div>
 </div>

@@ -10,33 +10,42 @@ export class CustomBoxComponent extends BaseComponent implements OnInit {
 
   orderRewiemList = [
     {
-      img : 'assets/custom-box/item.png',
-      title : 'Indomie (Chicken Flavour)' , 
-      price : 3.33
+      img: 'assets/custom-box/item.png',
+      title: 'Indomie (Chicken Flavour)',
+      price: 3.33
     },
     {
-      img : 'assets/custom-box/item.png',
-      title : 'Indomie (Chicken Flavour)' , 
-      price : 3.33
+      img: 'assets/custom-box/item.png',
+      title: 'Indomie (Chicken Flavour)',
+      price: 3.33
     },
     {
-      img : 'assets/custom-box/item.png',
-      title : 'Indomie (Chicken Flavour)' , 
-      price : 3.33
+      img: 'assets/custom-box/item.png',
+      title: 'Indomie (Chicken Flavour)',
+      price: 3.33
     },
     {
-      img : 'assets/custom-box/item.png',
-      title : 'Indomie (Chicken Flavour)' , 
-      price : 3.33
+      img: 'assets/custom-box/item.png',
+      title: 'Indomie (Chicken Flavour)',
+      price: 3.33
     }
   ];
+
+  currentStep = 0;
+  newAddressValue :any ;
+  showContent = false ;
+
   constructor(
-    injector : Injector
-  ) { 
+    injector: Injector
+  ) {
     super(injector);
   }
 
   ngOnInit(): void {
+  }
+
+  ShowOrderContent(){
+    this.showContent = !this.showContent;
   }
 
 }
