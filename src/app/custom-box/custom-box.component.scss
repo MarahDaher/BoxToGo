@@ -31,12 +31,11 @@ a {
     letter-spacing: 1px;
 }
 
-:host ::ng-deep .ant-btn:focus {
-    color: white !important;
-    border-color: white;
-    background: #fff;
-}
-
+// :host ::ng-deep .ant-btn:focus {
+//     color: white !important;
+//     border-color: white;
+//     background: #fff;
+// }
 //*------------custom-box-------------------*/
 .custom-box-card {
     background: #FFFFFF;
@@ -175,12 +174,42 @@ a {
     align-items: center;
 }
 
+.add-btn {
+    color: #2E9CC3;
+    display: flex;
+    align-items: center;
+}
+
+.btn-danger {
+    border-radius: 10px;
+    box-sizing: border-box;
+    background: #FA0200;
+    height: 42px;
+    border-color: #FA0200;
+}
+
+.btn-danger h3,
+.btn-light h3 {
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 26px;
+    text-align: center;
+    color: #FFFFFF;
+}
+
+.btn-light {
+    border: 1px solid #000000;
+    box-sizing: border-box;
+    border-radius: 10px;
+    height: 42px;
+    border-color: #000000;
+}
+
 .radio-title {
     font-weight: 400;
     font-size: 18px;
     line-height: 20px;
-    /* identical to box height, or 111% */
-    color: #AEAEAE;
+    color: #666666;
 }
 
 [nz-radio] {
@@ -193,44 +222,30 @@ a {
     height: 55px;
 }
 
-.default-btn {
-    display: flex;
-    height: 42px;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    /* box-shadow: 0px 4px 24px rgba(0, 0, 0, 0.1); */
-    border-radius: 10px;
+:host ::ng-deep .ant-radio-wrapper {
+    margin-right: 0px !important;
+}
+
+:host ::ng-deep .ant-radio-checked .ant-radio-inner {
+    border-color: #FA0200 !important;
+}
+
+:host ::ng-deep .ant-radio-inner::after {
+    border-color: #FA0200 !important;
+}
+
+:host ::ng-deep .ant-radio-checked::after {
+    border-color: #FA0200 !important;
+}
+
+:host ::ng-deep .ant-radio-wrapper-checked {
+    border: 1px solid #FA0200 !important;
     box-sizing: border-box;
-    background: #FA0200;
+    border-radius: 5px;
 }
 
-.default-btn span {
-    font-weight: 700;
-    font-size: 14px;
-    line-height: 26px;
-    text-align: center;
-    color: #FFFFFF;
-}
-
-.default-btn-shopping {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    /* box-shadow: 0px 4px 24px rgba(0, 0, 0, 0.1); */
-    border: 1px solid #000000;
-    box-sizing: border-box;
-    border-radius: 10px;
-    height: 42px;
-}
-
-.default-btn-shopping span {
-    font-weight: 700;
-    font-size: 14px;
-    line-height: 26px;
-    text-align: center;
-    color: black
+:host ::ng-deep .ant-radio {
+    margin: 0px 10px;
 }
 
 .note {
@@ -263,3 +278,5 @@ a {
     letter-spacing: -0.02em;
     color: #000000;
 }
+
+//*------------Modal------0*/

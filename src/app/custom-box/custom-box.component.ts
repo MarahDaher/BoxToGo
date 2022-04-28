@@ -1,5 +1,7 @@
-import { Component, Injector, OnInit } from '@angular/core';
+import { Component, Injector, OnInit, ViewContainerRef } from '@angular/core';
+import { NzModalService } from 'ng-zorro-antd/modal';
 import { BaseComponent } from '../shared/component/base.component';
+import { AddNewAddressComponent } from './add-new-address/add-new-address.component';
 
 @Component({
   selector: 'app-custom-box',
@@ -32,11 +34,15 @@ export class CustomBoxComponent extends BaseComponent implements OnInit {
   ];
 
   currentStep = 0;
-  newAddressValue :any ;
-  showContent = false ;
+  newAddressValue: any;
+  showContent = false;
+  radioValue: any;
 
   constructor(
-    injector: Injector
+    injector: Injector,
+    private viewContainerRef: ViewContainerRef,
+    public modal: NzModalService
+
   ) {
     super(injector);
   }
@@ -44,8 +50,23 @@ export class CustomBoxComponent extends BaseComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  ShowOrderContent(){
+  ShowOrderContent() {
     this.showContent = !this.showContent;
+  }
+
+
+  addNewAddress() {
+    const modal = this.modal.create({
+      nzTitle: '',
+      nzContent: AddNewAddressComponent,
+      nzViewContainerRef: this.viewContainerRef,
+      nzCloseIcon: undefined,
+      nzWidth : '710px',
+      nzOnOk: () => new Promise(resolve => setTimeout(resolve, 1000)),
+    });
+
+    modal.afterClose.subscribe(result => {
+    });
   }
 
 }

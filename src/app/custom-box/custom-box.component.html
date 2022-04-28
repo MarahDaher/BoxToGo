@@ -1,6 +1,6 @@
 <div class="custom-box mt-50">
     <div class="row">
-        <div class="col-md-8">
+        <div class="col-md-7">
             <div class="custom-box-card">
                 <div class="p-4">
                     <h3>Order Review</h3>
@@ -20,7 +20,7 @@
                                     </button>
                                 </span>
                             </span>
-                            <span class="d-flex align-items-end flex-column justify-content-between w-50">
+                            <span class="d-flex align-items-end flex-column justify-content-between w-75">
                                     <button nz-button nzType="default">
                                         <img src="assets/custom-box/delete.png">
                                     </button>
@@ -79,7 +79,7 @@
                                     </button>
                                 </span>
                             </span>
-                            <span class="d-flex align-items-end flex-column justify-content-between w-50">
+                            <span class="d-flex align-items-end flex-column justify-content-between w-75">
                                     <button nz-button nzType="default">
                                         <img src="assets/custom-box/delete.png">
                                     </button>
@@ -95,7 +95,7 @@
                     <hr>
 
 
-                    <div class="row d-flex justify-content-between">
+                    <div class="row d-flex justify-content-end">
                         <div class="col-md-6">
                             <span class="d-flex justify-content-between sub-total">
                                 <h3>Subtotal</h3>
@@ -122,7 +122,7 @@
                 </div>
             </div>
         </div>
-        <div class="col-md-4">
+        <div class="col-md-5">
             <div class="custom-box-card pb-3 p-2">
 
                 <div class="row p-4 pb-0">
@@ -161,30 +161,23 @@
 
                 <div class="row shopping-info m-0 p-0">
                     <h3>Shopping Information</h3>
-                    <h4> <i nz-icon nzType="plus" nzTheme="outline"></i>
+                    <button nz-button nzType="default" class="w-25 add-btn" (click)="addNewAddress()">
+                        <i nz-icon nzType="plus" nzTheme="outline"></i> 
                         <span class="mx-1">Add New Address</span>
-                    </h4>
-                    <div class="addresses">
-                        <div class="new-address">
-                            <label nz-radio ngModel class="my-2 p-2"><h3 class="radio-title">Address Name 1</h3></label>
-                            <label nz-radio ngModel class="my-2 p-2"><h3 class="radio-title">Address Name 2</h3></label>
-                        </div>
-                    </div>
-                </div>
+                    </button>
 
-                <div class="row w-100 m-0 p-0">
-                    <div class="col">
-                        <a class="default-btn p-2">
-                            <span class="mx-3">Continue</span>
-                        </a>
+                    <div class="addresses mt-1">
+                        <nz-radio-group [(ngModel)]="radioValue" class="w-100">
+                            <label nz-radio class="my-2 p-2 d-flex align-items-center" nzValue="A"><span class="radio-title mx-2">Address Name 1</span></label>
+                            <label nz-radio class="my-2 p-2 d-flex align-items-center" nzValue="B"><span class="radio-title mx-2">Address Name 2</span></label>
+                        </nz-radio-group>
                     </div>
-                </div>
 
-                <div class="row w-100 m-0 p-0 my-2">
-                    <div class="col">
-                        <a class="default-btn-shopping p-1">
-                            <span class="mx-3">Continue Shopping</span>
-                        </a>
+                    <div class="buttons">
+                        <button type="button" class="btn btn-danger w-100 my-1"><span>Continue</span></button>
+
+                        <button type="button" class="btn btn-light w-100 my-1"><span>Continue Shopping</span></button>
+
                     </div>
                 </div>
             </div>

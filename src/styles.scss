@@ -12,3 +12,17 @@ a {
 body {
     background: #F1F1F1;
 }
+
+.ant-modal-content {
+    border-radius: 30px !important;
+    /* background: red; */
+    margin: auto;
+}
+
+.ant-modal {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    top: 0;
+}

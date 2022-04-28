@@ -4,11 +4,13 @@ import { CommonModule } from '@angular/common';
 import { CustomBoxRoutingModule } from './custom-box-routing.module';
 import { CustomBoxComponent } from './custom-box.component';
 import { SharedModule } from '../shared/shared.module';
+import { AddNewAddressComponent } from './add-new-address/add-new-address.component';
 
 
 @NgModule({
   declarations: [
-    CustomBoxComponent
+    CustomBoxComponent,
+    AddNewAddressComponent
   ],
   imports: [
     CommonModule,
