@@ -36,6 +36,8 @@
                             }
                         ],
                         "styles": [
+                            "./node_modules/ngx-owl-carousel-o/lib/styles/prebuilt-themes/owl.carousel.min.css",
+                            "./node_modules/ngx-owl-carousel-o/lib/styles/prebuilt-themes/owl.theme.default.min.css",
                             "src/theme.less",
                             "src/styles.scss",
                             {
@@ -55,12 +57,12 @@
                             "budgets": [{
                                     "type": "initial",
                                     "maximumWarning": "500kb",
-                                    "maximumError": "1mb"
+                                    "maximumError": "5mb"
                                 },
                                 {
                                     "type": "anyComponentStyle",
-                                    "maximumWarning": "2kb",
-                                    "maximumError": "4kb"
+                                    "maximumWarning": "500kb",
+                                    "maximumError": "5mb"
                                 }
                             ],
                             "fileReplacements": [{

@@ -82,10 +82,6 @@ body {
     color: #FA0200;
 }
 
-.nav-item>a {
-    color: black;
-}
-
 .nav-item.active::before {
     content: "";
     position: absolute;
@@ -93,8 +89,28 @@ body {
     height: 1px;
     bottom: 29px;
     left: 6px;
+    color: #FA0200;
     background: linear-gradient(90deg, #FA0200 0%, rgba(250, 2, 0, 0) 98.61%);
     ;
+}
+
+.navbar-light .navbar-nav .nav-link {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 26px;
+    color: #000000;
+}
+
+.navbar-light .navbar-nav .nav-link.active,
+.navbar-light .navbar-nav .show>.nav-link {
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 26px;
+    color: #FA0200;
+}
+
+.navbar-light {
+    color: #000000;
 }
 
 .nav-item.active::after {
@@ -110,6 +126,22 @@ body {
 
 .store-rate {
     padding: .375rem .75rem
+}
+
+.input {
+    border: 1px solid #FA0200;
+    border-radius: 5px;
+}
+
+// .input-group:not(.has-validation)>.dropdown-toggle:nth-last-child(n+3),
+// .input-group:not(.has-validation)>:not(:last-child):not(.dropdown-toggle):not(.dropdown-menu) {
+//     border-radius: 5px;
+// }
+.input-group>:not(:first-child):not(.dropdown-menu):not(.valid-tooltip):not(.valid-feedback):not(.invalid-tooltip):not(.invalid-feedback) {
+    background: #FA0200;
+    border: 1px solid #FA0200;
+    border-radius: 0px 5px 5px 0px;
+    width: 40px;
 }
 
 

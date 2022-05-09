@@ -29,15 +29,31 @@ a {
 
 :host ::ng-deep .ant-tabs-tab.ant-tabs-tab-active .ant-tabs-tab-btn {
     text-shadow: 0 0 0.25px currentColor;
-    font-weight: 600;
-    font-size: 18px;
-    line-height: 41px;
     color: #000000;
-    letter-spacing: 1px;
+    font-weight: 600;
+    font-size: 22px;
+    line-height: 41px;
+    letter-spacing: -0.02em;
 }
 
 :host ::ng-deep .ant-tabs-tab {
     padding: 0px;
+}
+
+:host ::ng-deep .ant-tabs-tab-btn {
+    font-weight: 400;
+    font-size: 22px;
+    line-height: 41px;
+    letter-spacing: -0.02em;
+}
+
+:host ::ng-deep .ant-tabs-tab-btn:hover {
+    color: red !important;
+}
+
+:host ::ng-deep .ant-tabs-tab.ant-tabs-tab-active {
+    border-bottom: 2px solid black !important;
+    z-index: 2;
 }
 
 :host ::ng-deep .ant-tabs-nav-wrap {
@@ -48,6 +64,10 @@ a {
 :host ::ng-deep .ant-progress-bg {
     background-color: #FA0200 !important;
     height: 10px !important;
+}
+
+:host ::ng-deep .ant-tabs-tabpane {
+    height: 410px;
 }
 
 
@@ -164,4 +184,109 @@ a {
 
 .rate {
     height: 100%;
+}
+
+
+/*-----------best-sellers-----------*/
+
+.m-11 {
+    margin: .15rem!important
+}
+
+.best-sellers {
+    position: relative;
+}
+
+[nz-radio] {
+    display: block;
+    height: 32px;
+    line-height: 32px;
+}
+
+:host ::ng-deep .ant-radio-checked .ant-radio-inner {
+    border-color: #FA0200!important;
+}
+
+:host ::ng-deep .ant-radio-inner::after {
+    background-color: #FA0200 !important;
+}
+
+.best-sellers .circles {
+    width: 30px;
+    display: flex;
+    align-items: center;
+    position: absolute;
+    left: -30px;
+    top: auto;
+    height: 100%;
+}
+
+.best-sellers-card {
+    background: #FFFFFF;
+    box-shadow: 0px 4px 24px rgba(0, 0, 0, 0.1);
+    border-radius: 30px;
+}
+
+.best-sellers-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.best-sellers-header h3 {
+    font-weight: 700;
+    font-size: 22px;
+    line-height: 41px;
+    color: #000000;
+}
+
+.arrow-img {
+    cursor: pointer;
+    margin: 0px 10px;
+}
+
+.best-sellers-content {
+    padding: 0rem 1em 1em 1em;
+}
+
+.best-sellers-content h3 {
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 26px;
+    letter-spacing: -0.02em;
+    color: #000000;
+}
+
+.best-sellers-content small del {
+    font-size: 14px;
+    line-height: 22px;
+    letter-spacing: 0.02em;
+    text-decoration-line: line-through;
+    color: #A2A2A2;
+}
+
+.best-sellers-body {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+}
+
+.best-sellers-body .card:hover {
+    box-shadow: 0px 4px 24px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+}
+
+.best-sellers-body .card {
+    background: #FFFFFF;
+    border-radius: 30px;
+}
+
+.best-sellers-body .card .card-header {
+    padding: 0.75rem 0.5rem;
+    margin-bottom: 0;
+    background-color: rgba(0, 0, 0, .0);
+    border-bottom: none;
+}
+
+.add-btn:hover {
+    box-shadow: 0px 4px 24px rgba(219, 8, 8, 0.5);
 }

@@ -1,1 +1,419 @@
-<p>home-page works!</p>
+<div class="main">
+    <div class="header row m-0 py-0 py-sm-0">
+        <div class="col-12">
+            <div class="circles m-0 p-0 d-none d-md-flex">
+                <nz-radio-group [(ngModel)]="radioValue">
+                    <label nz-radio nzValue="1"></label>
+                    <label nz-radio nzValue="2"></label>
+                    <label nz-radio nzValue="3"></label>
+                </nz-radio-group>
+            </div>
+            <div class="header-img">
+                <img src="assets/home/header.png" class="img-fluid img">
+            </div>
+            <div class="circles-sm m-0 p-0 d-block d-md-none">
+                <nz-radio-group [(ngModel)]="radioValue">
+                    <label nz-radio nzValue="1"></label>
+                    <label nz-radio nzValue="2"></label>
+                    <label nz-radio nzValue="3"></label>
+                </nz-radio-group>
+            </div>
+        </div>
+
+        <div class="header d-none d-md-block">
+            <div class="header-swiper row p-5 py-0 w-100 text-center">
+                <div class="col-4">
+                    <img src="assets/home/box1.png" class="img-fluid img">
+                </div>
+                <div class="col-4">
+                    <img src="assets/home/box2.png" class="img-fluid img">
+                </div>
+                <div class="col-4">
+                    <img src="assets/home/box3.png" class="img-fluid img">
+                </div>
+            </div>
+            <div class="header-swiper-row row p-5 py-0 w-100">
+                <span class="d-flex align-items-center col">
+                    <img src="assets/home/arrow-left.png" width="20px">
+                    <h6 class="mx-4 mb-0">Don't miss The Chance</h6>
+                </span>
+                <div class="swiper-circles m-0 p-0 col">
+                    <nz-radio-group [(ngModel)]="radioValue">
+                        <label nz-radio nzValue="1"></label>
+                        <label nz-radio nzValue="2"></label>
+                        <label nz-radio nzValue="3"></label>
+                    </nz-radio-group>
+                </div>
+                <span class="d-flex align-items-center justify-content-end col">
+                    <img src="assets/home/arrow-right.png" width="20px">
+                </span>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<div class="header d-block d-md-none mt-3 py-0 py-sm-0">
+    <div class="text-center">
+        <img src="assets/home/sm-title-boxes.png" class="img-fluid">
+    </div>
+    <div class="app mt-3" style="margin-left: 22px;">
+        <div class="col" *ngFor="let box of headerBoxes">
+            <div style="padding-right: 10px;">
+                <img [src]="box?.img" width="340px">
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="main mt-5">
+    <div class="start-shoping mt-5">
+        <div class="text-center">
+            <img src="assets/home/shoping/title.png" class="img-fluid">
+        </div>
+        <div class="start-shoping-content row mt-3 d-none d-md-block">
+            <div class="col-12">
+                <div class="shoping-circles m-0 p-0">
+                    <nz-radio-group [(ngModel)]="radioValue">
+                        <label nz-radio nzValue="1"></label>
+                        <label nz-radio nzValue="2"></label>
+                        <label nz-radio nzValue="3"></label>
+                    </nz-radio-group>
+                </div>
+                <div class="row px-3">
+                    <div class="col-md-4 my-3 d-flex justify-content-center" *ngFor="let shop of shopingList">
+                        <div class="offer" *ngIf="shop?.offer">
+                            <img src="assets/home/shoping/offer.png" class="rectangle">
+                            <!-- <img src="assets/home/shoping/Vector 61.png" class="vector"> -->
+                        </div>
+                        <div class="card">
+                            <div class="icons" *ngIf="shop?.share">
+                                <img src="assets/home/shoping/fav.png" class="save">
+                                <img src="assets/home/shoping/share.png" class="share">
+                            </div>
+                            <div class="card-header">
+                                <img [src]="shop?.img" style="width: 100%;">
+
+                            </div>
+                            <div class="card-body pb-0 shoping-content">
+                                <h4>{{shop?.title}} </h4>
+                                <p>{{shop?.description}}</p>
+                                <small><del>{{shop?.prevPrice}}$</del></small>
+                                <span class="d-flex justify-content-between">
+                            <p class="text-danger">{{shop?.price}}$</p>
+                            <a class="shop-link">Shop Now <img src="assets/home/shoping/Stroke 3.png" class="mx-2"></a>
+                        </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="d-block d-md-none">
+            <div class="app mt-4">
+                <div class="col-7 start-shoping-content-sm px-2" *ngFor="let shop of shopingList">
+                    <div class="offer" *ngIf="shop?.offer">
+                        <img src="assets/home/shoping/offer.png" class="rectangle">
+                        <!-- <img src="assets/home/shoping/Vector 61.png" class="vector"> -->
+                    </div>
+                    <div class="card">
+                        <div class="icons" *ngIf="shop?.share">
+                            <img src="assets/home/shoping/fav.png" class="save" width="30px">
+                            <img src="assets/home/shoping/share.png" class="share" width="30px">
+                        </div>
+                        <div class="card-header">
+                            <img [src]="shop?.img" style="width: 100%;">
+
+                        </div>
+                        <div class="card-body pb-0 shoping-content-sm">
+                            <h4>{{shop?.title}} </h4>
+                            <small><del>{{shop?.prevPrice}}$</del></small>
+                            <span class="d-flex justify-content-between">
+                        <p class="text-danger">{{shop?.price}}$</p>
+                        <a class="shop-link">Shop Now <img src="assets/home/shoping/Stroke 3.png" class="mx-2"></a>
+                    </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="shop-fill mt-100">
+        <div class="text-center">
+            <img src="assets/home/shop-fill/title.png" class="img-fluid">
+        </div>
+        <div class="row mt-5 px-3 d-none d-md-block">
+            <div class="col">
+                <div class="shop-fill-box">
+                    <div class="p-5 row" style="position: relative;">
+                        <div class="col-6 p-3 mx-5">
+                            <h3>
+                                You can create your own Box <br> And add the items you want and then add <br>them to Cart
+                            </h3>
+                            <a class="default-btn w-50">
+                                <img src="assets/home/shop-fill/Vector.png">
+                                <span>Create now</span>
+                            </a>
+                        </div>
+                        <div class="col">
+                            <img src="assets/home/shop-fill/WEB-icons--5 2.png" class="web-icon">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="d-block d-md-none mt-5 px-3">
+            <div class="row shop-fill-box-sm" style="position: relative;">
+                <div class="col-7 p-4">
+                    <h3>
+                        You can create your own chest <br> And add the items you want
+                    </h3>
+                    <a class="default-btn mt-3">
+                        <img src="assets/home/shop-fill/Vector.png">
+                        <span>Create now</span>
+                    </a>
+                </div>
+                <div class="col">
+                    <img src="assets/home/shop-fill/WEB-icons--5 2.png" class="web-icon-sm" width="176px">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="why-us mt-100">
+        <div class="text-center">
+            <img src="assets/home/why-us/title.png" class="img-fluid">
+        </div>
+        <div class="row mt-3 p-4">
+            <div class="col-md-3 p-1">
+                <div class="why-us-box">
+                    <img src="assets/why-us/Vector1.png">
+                    <div class="content mt-2">
+                        <h5>Free Shipping</h5>
+                        <small>Free Shipping for allOrder</small>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 p-1">
+                <div class="why-us-box">
+                    <img src="assets/why-us/Vector2.png">
+                    <div class="content mt-2">
+                        <h5>Mony Back Guarantee</h5>
+                        <small>We return money within 10 day</small>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 p-1">
+                <div class="why-us-box">
+                    <img src="assets/why-us/Vector3.png">
+                    <div class="content mt-2">
+                        <h5>24/7 Customer Support</h5>
+                        <small>Friendly 24/7 customer support </small>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 p-1">
+                <div class="why-us-box">
+                    <img src="assets/why-us/Vector4.png">
+                    <div class="content mt-2">
+                        <h5>Secure Online Payment</h5>
+                        <small>Free Shipping for allOrderWe posess SSL /<br> Secure Certificate</small>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="who-we-are mt-100">
+        <div class="text-center">
+            <img src="assets/home/who-we-are/title.png" class="img-fluid">
+        </div>
+        <div class="who-we-are-content mt-5 px-3 d-none d-md-block">
+            <div class="col-md-12 who-we-are-box">
+                <div class="content text-center">
+                    <img src="assets/LOGO w.png">
+                    <div class="row my-4">
+                        <h4>
+                            Sarah just opened up her first boutique. She's makes little girl's tutus, and she finally can afford her own storefront. Granted, it's only,<br> 600 square feet, but it's a start! She's super excited, and can't wait for her
+                            business to grow. Her friends and family are supportive of this <br> new career path. They're pushing her to have a grand opening event.<br> One day she's talking to her younger sister, Rachel. Her sister suggests using an
+                            SMS marketing service to connect with her customers.<br> Sarah's reaction: "Wait... I can text my customers?" Rachel works for a text marketing provider....
+                        </h4>
+                    </div>
+                    <div class="default-btn text-center mt-4" style="background-image: url(assets/Button.png);width: 170px;">
+                        <span class="text-white" style="padding: 30px;"></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="d-block d-md-none who-we-are-content px-3">
+            <div class="who-we-are-box who-we-are-box-sm mt-5 flex-column">
+                <div class="row text-center">
+                    <img src="assets/LOGO w.png" width="110px">
+                </div>
+                <div class="row content-sm">
+                    <h4 class="p-5 pb-1">
+                        Sarah just opened up her first boutique. She's makes little girl's tutus, and she finally can afford her own storefront. Granted, it's only 600 square feet, but it's a start! She's super excited, and can't wait for her business to grow. Her friends and
+                        family are supportive of this new career path. They're pushing her to have a....
+                    </h4>
+                </div>
+                <div class="row default-btn text-center" style="background-image: url(assets/Button.png);width: 170px;background-repeat: no-repeat;">
+                    <span class="text-white" style="padding: 22px;"></span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<div class="client-feedback mt-100">
+    <div class="text-center">
+        <img src="assets/home/client-feedback/title.png" class="img-fluid">
+    </div>
+
+    <div class="d-none d-md-block">
+        <owl-carousel-o [options]="customOptions">
+            <ng-container *ngFor="let slide of feedbacksList">
+                <ng-template carouselSlide [id]="slide.id">
+                    <div class="client-feedback-content mt-4">
+                        <div class="content p-5">
+                            <div>
+                                <img src="assets/home/client-feedback/profile.png">
+                            </div>
+                            <div style="display: contents;">
+                                <h4>{{slide?.name}}</h4>
+                                <div class="line"></div>
+                                <div class="rate">
+                                    <nz-rate [ngModel]="4" nzDisabled></nz-rate>
+                                </div>
+                                <p class="px-4">
+                                    I never found app like this. It keeps me motivated to reach my goal. I have some new friends who have similar passion like me. I feel like I starting new life.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </ng-template>
+            </ng-container>
+        </owl-carousel-o>
+    </div>
+
+    <div class="d-block d-md-none px-3">
+        <owl-carousel-o [options]="customOptions">
+            <ng-container *ngFor="let slide of feedbacksList">
+                <ng-template carouselSlide [id]="slide.id">
+                    <div class="client-feedback-content-sm mt-4 p-3">
+                        <div class="content p-2 pb-0">
+                            <div>
+                                <img src="assets/home/client-feedback/profile.png" width="35px">
+                            </div>
+                            <div style="display: contents;">
+                                <h4>{{slide?.name}}</h4>
+                                <div class="line"></div>
+                                <div class="rate">
+                                    <nz-rate [ngModel]="4" nzDisabled></nz-rate>
+                                </div>
+                                <p class="px-4 mb-0">
+                                    I never found app like this. It keeps me motivated to reach my goal. I have some new friends who have similar passion like me. I feel like I starting new life.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </ng-template>
+            </ng-container>
+        </owl-carousel-o>
+    </div>
+
+</div>
+
+<div class="main">
+    <div class="download-app mt-100 px-2">
+        <div class="text-center">
+            <img src="assets/home/download-app/title.png" class="img-fluid">
+        </div>
+        <div class="download-app-content mt-5 d-none d-md-block" style="background-image: url(assets/download-app/carousel-default.png);">
+            <div class="col-md-6">
+            </div>
+            <div class="col">
+                <div class="download-img">
+                    <img src="assets/home/download-app/mobiles.png" class="img-lg">
+                </div>
+            </div>
+        </div>
+        <div class="d-block d-md-none mt-5 download-app-content-sm">
+            <div class="row d-flex align-items-center h-100">
+                <div class="col-8">
+                    <div class="p-3">
+                        <div class="row" style="position: relative;">
+                            <h3>
+                                Download the app for easier and smoother use And to stay informed of all the offers and discounts in Box To Go store
+                            </h3>
+                            <img src="assets/home/download-app/mobiles.png" class="img-sm" width="136px d-none">
+                        </div>
+                        <img src="assets/home/download-app/apps.png" class="mt-4">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="articles mt-100 pb-5">
+    <div class="text-center ">
+        <img src="assets/home/articles/title.png " class="img-fluid ">
+    </div>
+    <div class="articles-content row mt-5 m-0">
+        <div class="articles-circles m-0 p-0 d-none d-md-flex">
+            <nz-radio-group [(ngModel)]="radioValue">
+                <label nz-radio nzValue="1"></label>
+                <label nz-radio nzValue="2"></label>
+                <label nz-radio nzValue="3"></label>
+                <label nz-radio nzValue="4"></label>
+                <label nz-radio nzValue="5"></label>
+            </nz-radio-group>
+        </div>
+
+        <div class="d-none d-md-flex" style="overflow-x: auto;">
+            <div class="app px-5">
+                <div class="col-md-5" *ngFor="let article of articlesList " style="width: 366px;margin-right: 45px; ">
+                    <div>
+                        <div class="card ">
+                            <div class="card-header">
+                                <img [src]="article?.img " style="width: 100%; ">
+                            </div>
+                            <div class="card-body articles-content ">
+                                <h4>{{article?.title}}</h4>
+                                <p>{{article?.desc}}</p>
+                                <span class="d-flex justify-content-end ">
+                            <a class="shop-link ">Read More <img src="assets/start=shoping/Stroke 3.png " class="mx-2 "></a>
+                        </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="d-flex d-md-none">
+            <div class="app px-2">
+                <div class="col-8 start-shoping-content-sm px-2" *ngFor="let article of articlesListSm">
+                    <div class="card ">
+                        <div class="card-header p-2">
+                            <img [src]="article?.img " style="width: 100%; ">
+                        </div>
+                        <div class="card-body p-2 articles-content articles-sm">
+                            <h4>{{article?.title}}</h4>
+                            <p>{{article?.desc}}</p>
+                            <span class="d-flex justify-content-end ">
+                            <a class="shop-link ">Read More <img src="assets/start=shoping/Stroke 3.png " class="mx-2 "></a>
+                        </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

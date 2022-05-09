@@ -50,7 +50,48 @@ export class ProductComponent extends BaseComponent implements OnInit {
     {id : 1 , rate : 7},
   ];
 
+  bestSellerList = [
+    {
+      img: 'assets/product/semolina.png',
+      name:'Semolina',
+      price :'$3.33',
+      prevPrice :''
+    },
+    {
+      img: 'assets/product/wheat.png',
+      name:'Wheat',
+      price :'$3.33',
+      prevPrice :''
+    },
+    {
+      img: 'assets/product/Bean.png',
+      name:'Bean',
+      price :'$3.33',
+      prevPrice :''
+    },
+    {
+      img: 'assets/product/Freekeh.png',
+      name:'Freekeh',
+      price :'$3.33',
+      prevPrice :''
+    },
+    {
+      img: 'assets/product/lentil.png',
+      name:'Lentil',
+      price :'$3.33',
+      prevPrice :''
+    },
+    {
+      img: 'assets/product/rice.png',
+      name:'Rice',
+      price :'$3.33',
+      prevPrice :''
+    }
+  ];
+
   selectedProduct :any ;
+  radioValue = '1';
+  hideAddBtn = false;
 
   constructor(
     injector: Injector
@@ -61,5 +102,9 @@ export class ProductComponent extends BaseComponent implements OnInit {
   ngOnInit(): void {
     this.selectedProduct = this.productList[0];
   }
+  addToCard(){
+    this.hideAddBtn = true;
+  }
+
 
 }

@@ -1,51 +1,6 @@
-.section-title {
-    position: relative;
-}
-
-.section-title h3 {
-    font-family: 'Cairo';
-    font-style: normal;
-    font-weight: 700;
-    font-size: 28px;
-    line-height: 52px;
-    text-align: center;
-    color: #000000;
-}
-
-.section-title h3::before {
-    content: "";
-    position: absolute;
-    width: 144px;
-    height: 3px;
-    left: 560px;
-    /* border-bottom: 3px solid blue;
-    border-left: 3px solid transparent; */
-    background: linear-gradient(90deg, #FA0200 0%, rgba(250, 2, 0, 0) 98.61%);
-}
-
-.section-title h3::after {
-    content: "";
-    position: absolute;
-    width: 144px;
-    height: 3px;
-    left: 629px;
-    top: 50px;
-    background: linear-gradient(90deg, #FA0200 0%, rgba(250, 2, 0, 0) 98.61%);
-    ;
-}
-
-.mt-100 {
-    margin-top: 100px;
-}
-
-.mb-100 {
-    margin-bottom: 100px;
-}
-
-
-/*-----------about------------*/
-
-.about-us-content {
+///*-----------about------------*/
+.about-us-content,
+.vision-content {
     width: 100%;
     position: relative;
 }
@@ -54,8 +9,6 @@
     background: radial-gradient(42.84% 169.34% at 32.07% -18.75%, #ED413E 0%, #F70301 100%);
     opacity: 0.95;
     border-radius: 30px;
-    /* width: 1263px; */
-    height: 490px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -68,22 +21,15 @@
     line-height: 34px;
     text-align: center;
     color: white;
-    width: 1061px;
 }
 
 
 /*-----------vision------------*/
 
-.vision-content {
-    width: 100%;
-    position: relative;
-}
-
 .vision-content .vision-box {
     background: #FFFFFF;
     opacity: 0.95;
     border-radius: 30px;
-    height: 490px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -95,8 +41,8 @@
     font-size: 18px;
     line-height: 34px;
     text-align: center;
-    width: 1061px;
     color: black;
+    width: 100%;
 }
 
 
@@ -108,13 +54,13 @@
 
 .box1 {
     position: absolute;
-    right: 0;
-    top: -20px;
+    right: -41px;
+    top: -50px;
     z-index: -1;
 }
 
 .box2 {
     position: absolute;
     left: -1px;
-    top: 495px;
+    left: -41px;
 }

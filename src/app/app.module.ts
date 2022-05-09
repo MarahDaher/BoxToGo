@@ -11,9 +11,8 @@ import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { IconsProviderModule } from './icons-provider.module';
-import { NzLayoutModule } from 'ng-zorro-antd/layout';
-import { NzMenuModule } from 'ng-zorro-antd/menu';
 import { MainComponent } from './shared/component/main/main.component';
+import { CarouselModule } from 'ngx-owl-carousel-o';
 
 registerLocaleData(en);
 
@@ -27,8 +26,9 @@ registerLocaleData(en);
     AppRoutingModule,
     FormsModule,
     HttpClientModule,
-    BrowserAnimationsModule,
     IconsProviderModule,
+    BrowserAnimationsModule,
+    CarouselModule
   ],
   providers: [{ provide: NZ_I18N, useValue: en_US }],
   bootstrap: [AppComponent]

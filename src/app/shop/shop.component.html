@@ -1,0 +1,158 @@
+<div class="main">
+    <div class="shop">
+        <div class="category-carousel">
+            <ul class="nav me-auto mb-2 mb-lg-0 d-flex justify-content-between">
+                <li class="nav-item" *ngFor="let category of categoriesList" [ngClass]="{'active-item': category?.active == true}">
+                    <a class="nav-link" [ngClass]="{'active-link': category?.active == true}"> {{category?.name}}</a>
+                </li>
+            </ul>
+        </div>
+
+        <div class="main-body my-5">
+            <div class="row p-0 m-0">
+                <div class="col-md-10">
+                    <div class="best-sellers row p-0 m-0 my-3">
+                        <div class="circles m-0 p-0">
+                            <nz-radio-group [(ngModel)]="radioValue">
+                                <label nz-radio nzValue="1"></label>
+                                <label nz-radio nzValue="2"></label>
+                                <label nz-radio nzValue="3"></label>
+                            </nz-radio-group>
+                        </div>
+                        <div class="best-sellers-card col">
+                            <div class="p-2">
+                                <div class="best-sellers-header pt-2">
+                                    <h3 class=" mx-2">Best Sellers</h3>
+                                    <div class="card-button">
+                                        <img src="assets/shop/arrow-left (1).png" alt="" class="arrow-img">
+                                        <img src="assets/shop/arrow-left.png" alt="" class="arrow-img">
+                                    </div>
+                                </div>
+                                <div class="best-sellers-body my-3">
+                                    <div class="m-11" *ngFor="let seller of bestSellerList;let i = index">
+                                        <div class="card">
+                                            <div class="card-header">
+                                                <img [src]="seller?.img" style="width: 100%;">
+                                            </div>
+                                            <div class="card-body best-sellers-content">
+                                                <h3>{{seller?.name}}</h3>
+                                                <span class="d-flex ">
+                                                <p class="text-danger ">{{seller?.price}}</p>
+                                                <small class="mx-3"><del>{{seller?.prevPrice}}</del></small>
+                                            </span>
+                                                <a class="add-btn" (click)="addToCard()" *ngIf="!hideAddBtn">
+                                                    <img src="assets/shop/Order Quantity.png" style="width: 100%;" class="shadow">
+                                                </a>
+                                                <span class="row w-100 m-0 p-0" *ngIf="hideAddBtn">
+                                                <a class="col m-0 p-0">
+                                                    <img src="assets/shop/min.png">
+                                                </a>
+                                                <span class="col-6 p-0 m-0 text-center count">5</span>
+                                                <a class="col m-0 p-0 text-end">
+                                                    <img src="assets/shop/max.png">
+                                                </a>
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="best-sellers row p-0 m-0 mt-5">
+                        <div class="circles m-0 p-0">
+                            <nz-radio-group [(ngModel)]="radioValue">
+                                <label nz-radio nzValue="1"></label>
+                                <label nz-radio nzValue="2"></label>
+                                <label nz-radio nzValue="3"></label>
+                            </nz-radio-group>
+                        </div>
+                        <div class="best-sellers-card col">
+                            <div class="p-3">
+                                <div class="best-sellers-header pt-2">
+                                    <h3 class="mx-2">Cookies</h3>
+                                    <div class="card-button">
+                                        <img src="assets/shop/arrow-left (1).png" alt="" class="arrow-img">
+                                        <img src="assets/shop/arrow-left.png" alt="" class="arrow-img">
+                                    </div>
+                                </div>
+                                <div class="best-sellers-body my-3">
+                                    <div class="m-11" *ngFor="let cookie of cookiesList">
+                                        <div class="card">
+                                            <div class="card-header">
+                                                <img [src]="cookie?.img" style="width: 100%;">
+                                            </div>
+                                            <div class="card-body best-sellers-content">
+                                                <h3>{{cookie?.name}}</h3>
+                                                <span class="d-flex ">
+                                                <p class="text-danger ">{{cookie?.price}}</p>
+                                                <small class="mx-3"><del>{{cookie?.prevPrice}}</del></small>
+                                            </span>
+                                                <a class="add-btn" (click)="addToCard()" *ngIf="!hideAddBtn">
+                                                    <img src="assets/shop/Order Quantity.png" style="width: 100%;">
+                                                </a>
+                                                <span class="row w-100 m-0 p-0" *ngIf="hideAddBtn">
+                                                <a class="col m-0 p-0">
+                                                    <img src="assets/shop/min.png">
+                                                </a>
+                                                <span class="col-6 p-0 m-0 text-center">5</span>
+                                                <a class="col m-0 p-0 text-end">
+                                                    <img src="assets/shop/max.png">
+                                                </a>
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md my-3 m-0 p-0">
+                    <div class="">
+                        <div class="sub-total-card ">
+                            <div class="p-2">
+                                <div class="sub-total-header pb-0">
+                                    <h3>Subtotal</h3>
+                                    <h6>200.00$</h6>
+                                    <button type="button" class="btn btn-primary" disabled>
+                                        <img src="assets/shop/checkout.png">
+                                    </button>
+                                    <p class="my-1">minimum Order is 500$ Copy </p>
+                                    <nz-progress [nzPercent]="30" [nzShowInfo]="false"></nz-progress>
+                                    <hr>
+                                </div>
+
+                                <div class="sub-total-body row">
+                                    <div class="col p-3" *ngFor="let product of subTotalList">
+                                        <div class="delete-img">
+                                            <img src="assets/shop/delete.png">
+                                        </div>
+                                        <div class="">
+                                            <img [src]="product?.img" style="width: 100%;">
+                                        </div>
+                                        <div class="my-2 border-bottom">
+                                            <h3>{{product?.name}}</h3>
+                                            <p class="text-danger ">{{product?.price}}</p>
+                                            <div class="row w-100 m-0 p-0 my-2">
+                                                <a class="col m-0 p-0">
+                                                    <img src="assets/shop/min2.png">
+                                                </a>
+                                                <span class="col-6 p-0 m-0 text-center count">{{product?.count}}</span>
+                                                <a class="col m-0 p-0 text-end">
+                                                    <img src="assets/shop/max1.png">
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

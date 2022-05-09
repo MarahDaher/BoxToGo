@@ -8,6 +8,7 @@ import { BaseComponent } from '../shared/component/base.component';
 })
 export class HelpComponent extends BaseComponent implements OnInit {
 
+  hiddenBtn : boolean = false;
   constructor(
     injector: Injector
   ) { 
@@ -17,4 +18,7 @@ export class HelpComponent extends BaseComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  changeBtn(){
+    this.hiddenBtn = !this.hiddenBtn;
+  }
 }

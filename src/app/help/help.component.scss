@@ -2,52 +2,8 @@ a {
     text-decoration: none;
 }
 
-.section-title {
-    position: relative;
-}
-
-.section-title h3 {
-    font-family: 'Cairo';
-    font-style: normal;
-    font-weight: 700;
-    font-size: 28px;
-    line-height: 52px;
-    text-align: center;
-    color: #000000;
-}
-
-.section-title h3::before {
-    content: "";
-    position: absolute;
-    width: 144px;
-    height: 3px;
-    left: 560px;
-    /* border-bottom: 3px solid blue;
-    border-left: 3px solid transparent; */
-    background: linear-gradient(90deg, #FA0200 0%, rgba(250, 2, 0, 0) 98.61%);
-}
-
-.section-title h3::after {
-    content: "";
-    position: absolute;
-    width: 144px;
-    height: 3px;
-    left: 629px;
-    top: 50px;
-    background: linear-gradient(90deg, #FA0200 0%, rgba(250, 2, 0, 0) 98.61%);
-    ;
-}
-
 .mt-50 {
     margin-top: 50px;
-}
-
-.mb-100 {
-    margin-bottom: 100px;
-}
-
-.mt-100 {
-    margin-top: 100px;
 }
 
 
@@ -92,27 +48,14 @@ a {
 }
 
 .help-content {
-    padding: 2% 35px 35px 2%;
-}
-
-.img-title {
-    width: 260px;
+    width: 100%;
+    position: relative;
 }
 
 .help-video {
     background-repeat: no-repeat;
     background-size: contain;
-}
-
-
-/*------------------------contact-us--------------------*/
-
-.contact-us {
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    border-radius: 30px;
-    height: 608px;
+    width: 100%;
 }
 
 
@@ -147,6 +90,13 @@ h6 {
     color: #000000;
 }
 
-.img {
-    width: 100%;
+
+/*------------------------contact-us--------------------*/
+
+.contact-us {
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 30px;
+    height: 608px;
 }

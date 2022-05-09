@@ -1,27 +1,28 @@
 <div class="product mt-50">
     <div class="products-content">
         <div class="row">
-            <div class="col-md-6 text-center">
-                <img src="assets/product/1.png">
+            <div class="col-md-5 text-center">
+                <img src="assets/product/1.png" class="img-fluid">
             </div>
-            <div class="col-md-6 product-content">
-                <h1 class="mt-3">Pois chiches Madanli 900g - حمص معدنلي</h1>
-                <span class="d-flex align-items-center">
+            <div class="col-md-7 product-content">
+                <div class="p-4 p-sm-0 pt-0">
+                    <h1 class="mt-3">Pois chiches Madanli 900g - حمص معدنلي</h1>
+                    <span class="d-flex align-items-center">
                     <nz-rate [ngModel]="3" nzDisabled></nz-rate>
                     <p class="mx-3 mt-1 mb-0">4.8</p>
                 </span>
-                <span class="d-flex align-items-center product-price mt-2">
+                    <span class="d-flex align-items-center product-price mt-2">
                     <h1 class="text-danger">2,40 $</h1>
                     <small class="mx-4 mb-1"><del>4 $</del></small>
                 </span>
-                <h3>{{selectedProduct?.content}}</h3>
-                <h3>{{selectedProduct?.brand}}</h3>
-                <h3>{{selectedProduct?.category}}</h3>
-                <h3>{{selectedProduct?.tag}}</h3>
-                <h3>{{selectedProduct?.sku}}</h3>
+                    <h3>{{selectedProduct?.content}}</h3>
+                    <h3>{{selectedProduct?.brand}}</h3>
+                    <h3>{{selectedProduct?.category}}</h3>
+                    <h3>{{selectedProduct?.tag}}</h3>
+                    <h3>{{selectedProduct?.sku}}</h3>
 
-                <h4 class="mt-2">Quantité:</h4>
-                <span class="d-flex align-items-center product-quantity">
+                    <h4 class="mt-2">Quantité:</h4>
+                    <span class="d-flex align-items-center product-quantity">
                     <button nz-button nzType="default">
                         <img src="assets/product/min.png">
                     </button>
@@ -31,24 +32,24 @@
                     </button>
                     <span class="product-Shipping mx-2">
                         <h3>Shipping: <span class="text-danger">4.80 $</span></h3>
-                </span>
-                </span>
-
+                    </span>
+                    </span>
+                </div>
             </div>
         </div>
-        <div class="row pb-4">
-            <div class="col-md-6 row d-flex justify-content-center">
+        <div class="row pb-4 d-flex">
+            <div class="col-md-5 row d-flex justify-content-center">
                 <a class="product-item col-2" *ngFor="let img of minProduct">
                     <img [src]="img?.img">
                 </a>
             </div>
-            <div class="col-md-6 d-flex justify-content-end ">
+            <div class="col-md-7 d-flex justify-content-center justify-content-sm-end mt-3 mt-sm-0">
                 <button nz-button nzType="default">
-                    <img src="assets/product/share.png">
+                    <img src="assets/product/share.png" class="img-fluid">
                 </button>
 
                 <button nz-button nzType="default">
-                    <img src="assets/product/btn.png">
+                    <img src="assets/product/btn.png" class="img-fluid">
                 </button>
             </div>
         </div>
@@ -56,7 +57,7 @@
 </div>
 
 <div class="product mt-25">
-    <div class="products-content p-4 pt-2">
+    <div class="products-content pt-2 p-0 p-sm-3">
         <div class="row">
             <div class="col">
                 <nz-tabset>
@@ -69,7 +70,14 @@
 
                         </p>
                     </nz-tab>
-                    <nz-tab nzTitle="Specifications">Content of Tab Pane 2</nz-tab>
+                    <nz-tab nzTitle="Specifications">
+                        <p class="tab-content">
+                            Waterproof Camera Bag Photo Cameras Backpack For Canon Nikon Sony Xiaomi Laptop DSLR Portable Travel Tripod Lens Pouch Video Bag <br> <br> The camera knapsack is multi-functional to storage your cameras, accessories, computer,
+                            water bottle and other small things. Waterproof material and large capacity, the knapsack is suitable for outdoors or travel. Also it can be fixed on the suitcase rod for its back belt. <br>Features: One side pocket can put
+                            water bottle or camera rod, the other side can storage a camera. The back pocket can storage your flat computer. High-quality material, waterproof and durable. Inside compartment can storage cameras and accessories. Above pocket
+                            can put some small things for convenient take.<br> Specifications:
+                        </p>
+                    </nz-tab>
                 </nz-tabset>
             </div>
         </div>
@@ -77,22 +85,22 @@
 </div>
 
 <div class="product mt-25">
-    <div class="p-4">
+    <div class="p-3 p-sm-4">
         <div class="row">
             <div class="col header-reviews">
-                <h3 class="mx-3">Customer Reviews</h3>
+                <h3 class="mx-4">Customer Reviews</h3>
             </div>
         </div>
-        <div class="row">
+        <div class="row mx-1">
             <div class="col-md-6 row">
-                <div class="row" *ngFor="let review of reviewList">
+                <div class="row m-0 p-0" *ngFor="let review of reviewList">
                     <span class="review col">
                     <h6>{{review?.id}}</h6>
                     <nz-progress [nzPercent]="review?.rate" class="w-100 mx-2"></nz-progress>
                 </span>
                 </div>
             </div>
-            <div class="col-md-6">
+            <div class="col-md-6 mt-3 mt-sm-0">
                 <div class="d-flex justify-content-center align-items-center rate">
                     <h3 class="mx-3 my-1">4.0</h3>
                     <nz-rate [ngModel]="2" nzDisabled></nz-rate>
@@ -101,5 +109,55 @@
 
         </div>
     </div>
+</div>
 
+<div class="mt-25">
+    <div class="best-sellers row p-0 m-0 my-3">
+        <div class="circles m-0 p-0">
+            <nz-radio-group [(ngModel)]="radioValue">
+                <label nz-radio nzValue="1"></label>
+                <label nz-radio nzValue="2"></label>
+                <label nz-radio nzValue="3"></label>
+            </nz-radio-group>
+        </div>
+        <div class="best-sellers-card col">
+            <div class="p-2">
+                <div class="best-sellers-header pt-2">
+                    <h3 class=" mx-2">Best Sellers in this Subcategory</h3>
+                    <div class="card-button">
+                        <img src="assets/shop/arrow-left (1).png" alt="" class="arrow-img">
+                        <img src="assets/shop/arrow-left.png" alt="" class="arrow-img">
+                    </div>
+                </div>
+                <div class="best-sellers-body my-3">
+                    <div class="m-11" *ngFor="let seller of bestSellerList;let i = index">
+                        <div class="card">
+                            <div class="card-header">
+                                <img [src]="seller?.img" style="width: 100%;">
+                            </div>
+                            <div class="card-body best-sellers-content">
+                                <h3>{{seller?.name}}</h3>
+                                <span class="d-flex ">
+                                <p class="text-danger ">{{seller?.price}}</p>
+                                <small class="mx-3"><del>{{seller?.prevPrice}}</del></small>
+                            </span>
+                                <a class="add-btn" (click)="addToCard()" *ngIf="!hideAddBtn">
+                                    <img src="assets/shop/Order Quantity.png" style="width: 100%;" class="shadow">
+                                </a>
+                                <span class="row w-100 m-0 p-0" *ngIf="hideAddBtn">
+                                <a class="col m-0 p-0">
+                                    <img src="assets/shop/min.png">
+                                </a>
+                                <span class="col-6 p-0 m-0 text-center count">5</span>
+                                <a class="col m-0 p-0 text-end">
+                                    <img src="assets/shop/max.png">
+                                </a>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
